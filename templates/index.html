@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload CSV File</title>
+</head>
+<body>
+    <h1>Upload a CSV File</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="csvFile" name="csvFile" accept=".csv" required>
+        <br>
+        <h1>Choose a Role</h1>
+        <input type="checkbox" name="userRole[]" value="manager"> Manager<br>
+        <input type="checkbox" name="userRole[]" value="c_suite"> C-Suite<br>
+        <input type="checkbox" name="userRole[]" value="director"> Director<br>
+        <input type="checkbox" name="userRole[]" value="vp"> VP<br>
+        <input type="checkbox" name="userRole[]" value="founder"> Founder<br>
+        <input type="checkbox" name="userRole[]" value="owner"> Owner<br>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
