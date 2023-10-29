@@ -11,20 +11,6 @@ def home():
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-# @app.route('/upload', methods=['POST', "GET"])
-# def upload_csv():
-#     if 'csvFile' in request.files:
-#         csv_file = request.files['csvFile']
-#         df = pd.read_csv(csv_file)
-#         data=df[['Website', 'Country', 'Company' ]]
-
-#         updated_file_path = f"{app.config['UPLOAD_FOLDER']}/updated_file.csv"
-#         data.to_csv(updated_file_path, index=False)
-
-#         return 'File uploaded and processed. <a href="/download">Download the updated file</a>'
-
-#     return 'No valid CSV file uploaded.'
-
 def apollo(api_key, url, domains):
     comp= []
     for company in domains:
