@@ -9,10 +9,7 @@ app= Flask(__name__)
 def home():
     return render_template('index.html')
 
-UPLOAD_FOLDER = 'c:\\Users\\innoppl\\VS Code\\uploads'
-if not os.path.exists(UPLOAD_FOLDER):
-    os.makedirs(UPLOAD_FOLDER)
-
+UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # @app.route('/upload', methods=['POST', "GET"])
