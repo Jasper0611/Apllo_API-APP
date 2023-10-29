@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, send_file 
 import requests
 import pandas as pd
+import os
 
 app= Flask(__name__)
 
@@ -9,6 +10,8 @@ def home():
     return render_template('index.html')
 
 UPLOAD_FOLDER = 'uploads'
+if not os.path.exists(UPLOAD_FOLDER):
+    os.makedirs(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 def apollo(api_key, url, domains):
